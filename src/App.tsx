@@ -1,4 +1,6 @@
+import Card from "./components/Card";
 import Greet from "./components/Greet";
+import ParentComponent from "./components/ParentComponent";
 import PeopleList, { Employee } from "./components/PeopleList";
 
 function App() {
@@ -27,8 +29,19 @@ function App() {
   ];
   return (
     <main>
+      {/* Standard Props */}
       <Greet name="Viswhas" messageCount={2} />
+
+      {/* List */}
       <PeopleList nameList={employees} />
+
+      {/* Union Props */}
+      <Card color="yellow" />
+
+      {/* Children Props */}
+      <ParentComponent heading="Yellow">
+        <p>Hellow</p>
+      </ParentComponent>
     </main>
   );
 }
