@@ -1,7 +1,9 @@
 import Card from "./components/Card";
+import EventSample from "./components/EventSample";
 import Greet from "./components/Greet";
 import ParentComponent from "./components/ParentComponent";
 import PeopleList, { Employee } from "./components/PeopleList";
+import StylePropSample from "./components/StylePropSample";
 
 function App() {
   const employees: Employee[] = [
@@ -39,9 +41,23 @@ function App() {
       <Card color="yellow" />
 
       {/* Children Props */}
-      <ParentComponent heading="Yellow">
-        <p>Hellow</p>
+      <ParentComponent heading="this is a parent">
+        <p>This is the child element</p>
+        <Card color="green"></Card>
       </ParentComponent>
+
+      {/* React.MouseEvent */}
+      <EventSample
+        handleClick={(e) => {
+          console.log("222");
+          console.log(e);
+        }}
+      />
+
+      {/* React.CSSProperties */}
+      <StylePropSample
+        styles={{ border: "2px solid black", fontWeight: "bold" }}
+      />
     </main>
   );
 }
