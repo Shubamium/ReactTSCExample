@@ -4,6 +4,7 @@ import Greet from "./components/Greet";
 import ParentComponent from "./components/ParentComponent";
 import PeopleList, { Employee } from "./components/PeopleList";
 import StylePropSample from "./components/StylePropSample";
+import UseStateSample from "./components/UseStateSample";
 
 function App() {
   const employees: Employee[] = [
@@ -58,6 +59,9 @@ function App() {
       <StylePropSample
         styles={{ border: "2px solid black", fontWeight: "bold" }}
       />
+
+      {/* UseState Hooks*/}
+      <UseStateSample />
     </main>
   );
 }
