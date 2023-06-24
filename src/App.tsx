@@ -1,4 +1,5 @@
 import Card from "./components/Card";
+import ContextSample from "./components/ContextSample";
 import EventSample from "./components/EventSample";
 import Greet from "./components/Greet";
 import ParentComponent from "./components/ParentComponent";
@@ -62,6 +63,7 @@ function App() {
 
       {/* UseState Hooks*/}
       <UseStateSample />
+      <ContextSample />
     </main>
   );
 }
